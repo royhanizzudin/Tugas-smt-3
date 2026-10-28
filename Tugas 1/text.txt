@@ -1,0 +1,4 @@
+instal vscode done 
+v1.125.1
+instal node done
+v26.13.0
