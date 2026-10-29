@@ -3,7 +3,7 @@ const transaksi = [
   { id: 1, barang: 'xlim artio', harga: 200_000, qty: 1, kategori: 'oxva' },
   { id: 2, barang: 'xlim pro3', harga: 280_000, qty: 1, kategori: 'oxva' },
   { id: 3, barang: 'xlim pro', harga: 230_000, qty: 2, kategori: 'oxva' },
-  { id: 4, barang: 'druga foxy', harga: 500_000, qty: 1, kategori: 'druga' },
+  { id: 4, barang: 'foxy', harga: 500_000, qty: 1, kategori: 'druga' },
   { id: 5, barang: 'vaporesso xros 6', harga: 230_000, qty: 1, kategori: 'vaporesso' },
   { id: 6, barang: 'vaporesso xros 5', harga: 180_000, qty: 1, kategori: 'vaporesso' }
 ];
