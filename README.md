@@ -6,8 +6,11 @@ Tugas 1
 -instal node
 
 Tugas 2
--base html
+-Fondasi HTML5 Semantik & Form Handling Standar W3C
 
 Tugas 3
 -learn .html
--add CSS
+-Modern Styling dengan CSS3, Flexbox & CSS Grid
+
+Tugas 4
+-Modern JavaScript (ES6+ Core & Functional Paradigms)
