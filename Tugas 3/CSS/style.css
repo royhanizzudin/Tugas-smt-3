@@ -1,0 +1,142 @@
+/* Variabel & reset */
+:root {
+    --warna-utama: #1a365d;
+    --warna-nav: #dacdcd;
+    --warna-latar: #f4f6fa;
+    --warna-kartu: #ffffff;
+    --warna-teks: #1f2933;
+    --radius: 12px;
+}
+
+* {
+    box-sizing: border-box; /* padding & border tidak menambah lebar elemen */
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: "Segoe UI", system-ui, sans-serif;
+    line-height: 1.6;
+    color: var(--warna-teks);
+    background-color: var(--warna-latar);
+
+    /* FLEXBOX: footer selalu menempel di bawah halaman */
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;                 /* main mengisi sisa ruang, footer terdorong ke bawah */
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 24px 5%;
+}
+
+/* Header & navigasi (FLEXBOX) */
+header {
+    display: flex;
+    justify-content: space-between;  /* judul di kiri, menu di kanan */
+    align-items: center;
+    flex-wrap: wrap;                 /* turun ke baris baru jika sempit */
+    gap: 16px;
+    padding: 16px 5%;
+    background-color: #fff;
+    border-bottom: 3px solid var(--warna-utama);
+}
+
+h1 {
+    margin: 0;
+    color: black;
+    font-size: clamp(1.4rem, 4vw, 1.75rem); /* fleksibel: 22px - 28px */
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;           /* menggantikan inline-block */
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+nav ul li {
+    background-color: var(--warna-nav);
+    border: 3px solid var(--warna-utama);
+    border-radius: 8px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+nav ul li a {
+    display: block;
+    min-width: 100px;
+    padding: 12px 20px;
+    color: rgb(0, 0, 0);
+    text-decoration: none;   /* Menghilangkan garis bawah link */
+    text-align: center;
+    font-weight: 600;
+}
+
+nav ul li:hover {            /* tanpa spasi: hover mengenai kotak <li> itu sendiri */
+    transform: translateY(-8px);
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* CSS GRID: kartu dengan auto-fit */
+.grid-kartu {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.kartu {
+    padding: 20px;
+    background-color: var(--warna-kartu);
+    border: 1px solid #d5dbe6;
+    border-top: 5px solid var(--warna-utama);
+    border-radius: var(--radius);
+}
+
+.kartu h3 {
+    margin: 0 0 8px;
+    font-size: 1.1rem;
+    color: var(--warna-utama);
+}
+
+.kartu p {
+    margin: 0;
+}
+
+/* Footer  */
+footer {
+    padding: 16px 5%;
+    text-align: center;
+    color: #fff;
+    background-color: var(--warna-utama);
+}
+
+footer p {
+    margin: 0;
+}
+
+/* RESPONSIVE (media query) */
+
+/* Tablet: 768px ke bawah */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+/* Mobile: 480px ke bawah  */
+@media (max-width: 480px) {
+    nav,
+    nav ul {
+        width: 100%;
+    }
+
+    nav ul li {
+        flex: 1 1 100%;      /* tiap menu selebar layar */
+    }
+}
