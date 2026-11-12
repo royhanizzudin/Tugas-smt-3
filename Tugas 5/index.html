@@ -1,51 +1,71 @@
 <!DOCTYPE html>
-<html lang="id">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Pencarian Profil GitHub</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <main class="container">
-    <h1>Cari Profil GitHub</h1>
+<html lang="en">
+  <head>
+    <meta Charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas Web - Cari profil github</title>
+    <style>
+      /* CSS */
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f7f6;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
 
-    <form id="search-form" class="search-box">
-      <input
-        type="text"
-        id="username-input"
-        placeholder="Masukkan username GitHub (cth: torvalds)"
-        autocomplete="off"
-        required
-      />
-      <button type="submit" id="search-btn">Cari</button>
-    </form>
+      .container {
+        background-color: white;
+        padding:20px 30px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0, 1);
+        width: 320px;
+        text-align: center;
+      }
+      
+      h2{
+        font-size: 1.2rem;
+        color: #333;
+        margin-bottom: 15px;
 
-    <!-- State: Loading -->
-    <div id="loading" class="status-box hidden">
-      <div class="spinner"></div>
-      <p>Sedang mencari profil...</p>
-    </div>
 
-    <!-- State: Error (404 / Gagal) -->
-    <div id="error-message" class="status-box error hidden"></div>
+      }
 
-    <!-- State: Berhasil -->
-    <section id="profile-card" class="card hidden">
-      <img id="avatar" src="" alt="Avatar Pengguna" class="avatar" />
-      <div class="profile-info">
-        <h2 id="name"></h2>
-        <p id="bio" class="bio"></p>
-        <div class="stats">
-          <span>Repositori Publik: <strong id="repos-count">0</strong></span>
-        </div>
-        <a id="profile-link" href="#" target="_blank" rel="noopener noreferrer" class="btn-link">
-          Lihat Profil di GitHub &rarr;
-        </a>
-      </div>
-    </section>
-  </main>
+      .search-area {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 20px;
 
-  <script src="script.js"></script>
-</body>
-</html>
+      }
+
+      input {
+        flex: 1;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+      button {
+        padding: 8px 15px;
+        background-color: #2ea44f;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+
+      }
+
+       button:hover {
+        background-color: #22863A;
+       } 
+
+       /* class untuk menyembunyikan  elemen  */
+       .hidden {
+        display: none !important;
+
+       }
+
+       /* styling notifikasi */
+    </style>
+  </head>
