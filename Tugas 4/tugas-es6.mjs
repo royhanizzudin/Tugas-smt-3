@@ -12,7 +12,7 @@ console.log('Data Transaksi Belanja:');
 console.table(transaksi);
 
 // Filter: mencari data kategori tertentu
-const kategoriDicari = 'druga';
+const kategoriDicari = 'oxva';
 const hasilFilter = transaksi.filter(({ kategori }) => kategori === kategoriDicari);
 
 console.log(`\nHasil Filter Kategori: ${kategoriDicari}`);
