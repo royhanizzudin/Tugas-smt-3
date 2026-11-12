@@ -1,71 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta Charset="UTF-8">
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tugas Web - Cari profil github</title>
-    <style>
-      /* CSS */
-      body {
-        font-family: Arial, sans-serif;
-        background-color: #f4f7f6;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        margin: 0;
-      }
+    <title>Pencari Profil GitHub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Cari Profil GitHub</h1>
+        
+        <!-- Form Pencarian -->
+        <form id="search-form">
+            <input type="text" id="search-input" placeholder="Masukkan username GitHub..." required>
+            <button type="submit">Cari</button>
+        </form>
 
-      .container {
-        background-color: white;
-        padding:20px 30px;
-        border-radius: 8px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0, 1);
-        width: 320px;
-        text-align: center;
-      }
-      
-      h2{
-        font-size: 1.2rem;
-        color: #333;
-        margin-bottom: 15px;
+        <!-- Riwayat Pencarian -->
+        <div class="history-container">
+            <ul id="history-list"></ul>
+            <button id="clear-history" class="hidden">Hapus Semua Riwayat</button>
+        </div>
 
+        <!-- Indikator Loading & Error -->
+        <div id="loading" class="hidden">Mencari data...</div>
+        <div id="error-message" class="hidden"></div>
 
-      }
+        <!-- Kartu Hasil Profil -->
+        <div id="profile-card" class="card hidden">
+            <img id="avatar" src="" alt="Foto Profil">
+            <h2 id="name"></h2>
+            <p id="bio"></p>
+            <p class="stats">Repositori Publik: <span id="repo-count"></span></p>
+            <a id="profile-link" href="" target="_blank" class="btn">Kunjungi Profil</a>
+        </div>
+    </div>
 
-      .search-area {
-        display: flex;
-        gap: 10px;
-        margin-bottom: 20px;
-
-      }
-
-      input {
-        flex: 1;
-        padding: 8px;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-      }
-      button {
-        padding: 8px 15px;
-        background-color: #2ea44f;
-        color: white;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-
-      }
-
-       button:hover {
-        background-color: #22863A;
-       } 
-
-       /* class untuk menyembunyikan  elemen  */
-       .hidden {
-        display: none !important;
-
-       }
-
-       /* styling notifikasi */
-    </style>
-  </head>
+    <!-- Menghubungkan ke file JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
