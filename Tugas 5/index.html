@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pencari Profil GitHub</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css"> 
 </head>
 <body>
+   <!-- MASUKKAN DI SINI (Baris paling atas di dalam body) -->
+    <button onclick="toggleDarkMode()" style="float: right;">🌙 Mode Gelap</button>
     <div class="container">
         <h1>Cari Profil GitHub</h1>
         
@@ -33,6 +35,8 @@
             <p id="bio"></p>
             <p class="stats">Repositori Publik: <span id="repo-count"></span></p>
             <a id="profile-link" href="" target="_blank" class="btn">Kunjungi Profil</a>
+            <h3>5 Repositori Terbaru:</h3>
+            <div id="repo-list"></div>
         </div>
     </div>
 
