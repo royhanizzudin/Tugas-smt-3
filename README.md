@@ -14,3 +14,9 @@ Tugas 3
 
 Tugas 4
 -Modern JavaScript (ES6+ Core & Functional Paradigms)
+
+Tugas 5
+-Pencarian akun github
+
+Tugas 6 
+-___.vue
